@@ -1,0 +1,21 @@
+.PostList {
+    width: 90%;
+    margin: 0 auto;
+    border: 2px solid var(--black-color);
+    border-radius: var(--border-radius);
+}
+
+.post:nth-child(even) {
+    background-color: var(--light-gray-color);
+}
+
+.post:nth-child(odd) {
+    background-color: var(--white-color);
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+}
+

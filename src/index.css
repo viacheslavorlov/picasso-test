@@ -1,0 +1,20 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    /*  Переменные  */
+
+    --white-color: #eee;
+    --black-color: #000;
+    --border-radius: 8px;
+    --box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.4);
+    --blue-color: #0033ff;
+    --light-gray-color: #888;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

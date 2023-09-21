@@ -1,0 +1,27 @@
+.Post {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-weight: 500;
+    padding: 4px;
+}
+
+.btn {
+    margin-left: auto;
+    text-decoration: none;
+    color: var(--white-color);
+    background-color: var(--blue-color);
+    border-radius: var(--border-radius);
+    padding: 4px;
+}
+
+.id {
+    font-weight: 700;
+}
+
+.title {
+    display: block;
+}
