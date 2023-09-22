@@ -1,19 +1,22 @@
-import {classNames} from '../../../shared/lib/classNames/classNames';
+import {DetaildPostCard} from '@/features/DetaildPostCard';
+import {classNames} from '@/shared/lib/classNames/classNames';
+import {Page} from '@/shared/ui/Page';
 import cls from './SinglePost.module.css';
 import {memo} from 'react';
 
-interface SInglePostPageProps {
+export interface SInglePostPageProps {
     className?: string;
 }
 
-export const SinglePostPage = memo((props: SInglePostPageProps) => {
+const SinglePostPage = memo((props: SInglePostPageProps) => {
     const {
         className
     } = props;
 
     return (
-        <div className={classNames(cls.SinglePostPage, className)}>
-            <h1>Single post page</h1>
-        </div>
+        <Page className={classNames(cls.SinglePostPage, className)}>
+            <DetaildPostCard />
+        </Page>
     );
 });
+export default SinglePostPage;

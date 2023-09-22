@@ -1,0 +1,35 @@
+.DetaildPostCard {
+    padding: 2em;
+}
+
+.title {
+    width: 70%;
+    align-self: center;
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: underline;
+    color: var(--black-color);
+    text-align: center;
+}
+
+.body {
+    align-self: center;
+    box-sizing: border-box;
+    margin: 1em;
+    padding: 1em;
+    width: 80%;
+    font-size: 20px;
+    line-height: 1.6;
+    border-radius: var(--border-radius);
+    background-color: var(--light-gray-color);
+}
+
+.backButton {
+    align-self: center;
+    margin-right: 1em;
+    text-decoration: none;
+    color: var(--white-color);
+    background-color: var(--blue-color);
+    border-radius: var(--border-radius);
+    padding: 4px;
+}

@@ -1,11 +1,11 @@
-import {IPost} from '../../../entities/Post/model/type';
-import {baseApi} from '../../../shared/api/baseApi';
+import {IPost} from '@/entities/Post';
+import {baseApi} from '@/shared/api/baseApi';
 
 export const fetchPostsEndpoint = baseApi.injectEndpoints({
     endpoints: builder => ({
-        getPosts: builder.query<IPost, number>({
+        getPosts: builder.query<IPost[], number>({
             query: (pageNumber) => {
-                return `/posts?_limit=20&page=${pageNumber}`;
+                return `/posts?_limit=20&_page=${pageNumber}`;
             },
             merge(currentCashe, responseData) {
                 currentCashe.push(...responseData);
@@ -21,4 +21,4 @@ export const fetchPostsEndpoint = baseApi.injectEndpoints({
     overrideExisting: true,
 });
 
-
+export const {useGetPostsQuery} = fetchPostsEndpoint;

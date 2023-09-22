@@ -1,6 +1,6 @@
-import {Link} from 'react-router-dom';
-import {classNames} from '../../shared/lib/classNames/classNames';
+import {classNames} from '../../../lib/classNames/classNames';
 import cls from './ErrorPage.module.css';
+import {AppLink} from '../../AppLink';
 import {memo} from 'react';
 
 interface ErrorPageProps {
@@ -15,9 +15,9 @@ export const ErrorPage = memo((props: ErrorPageProps) => {
 
     return (
         <div className={classNames(cls.ErrorPage, className)}>
-            <h1>Error while loading data</h1>
+            <h1>Что то пошло не так...</h1>
             {message && <p>{message}</p>}
-            <Link to={'/'}>Back to main page</Link>
+            <AppLink to={'/'} title={'Вернуться на главную страницу'}/>
         </div>
     );
 });

@@ -1,11 +1,11 @@
-import {Flex, FlexProps} from '../Flex/Flex';
+import {Flex, FlexAlign, FlexProps} from '../Flex/Flex';
 
 type HStackProps = Omit<FlexProps, 'direction'>
 
 export const VStack = (props: HStackProps) => {
-	const {children, align = 'start'} = props;
+	const {children, align = 'start', ref} = props;
 	return (
-		<Flex direction="column" align={align} {...props}>
+		<Flex ref={ref} direction="column" align={align as FlexAlign} {...props}>
 			{children}
 		</Flex>
 	);

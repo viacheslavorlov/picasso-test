@@ -9,8 +9,9 @@
     --black-color: #000;
     --border-radius: 8px;
     --box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.4);
-    --blue-color: #0033ff;
-    --light-gray-color: #888;
+    --blue-color: #4363e3;
+    --light-gray-color: #b6b6b6;
+    --dark-gray: #444444
 }
 
 * {

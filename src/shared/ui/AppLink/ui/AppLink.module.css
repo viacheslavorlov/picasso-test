@@ -1,0 +1,12 @@
+.AppLink {
+    text-decoration: none;
+    color: var(--white-color);
+    background-color: var(--blue-color);
+    border-radius: var(--border-radius);
+    padding: 4px;
+    transition: all 0.3s;
+}
+
+.AppLink:hover {
+    transform: scale(1.07);
+}
