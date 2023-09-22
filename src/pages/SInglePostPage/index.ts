@@ -1,3 +1,3 @@
-import {SinglePostPageLazy} from '@/pages/SInglePostPage/ui/SinglePostPageLazy';
+import {SinglePostPageLazy} from './ui/SinglePostPageLazy';
 
 export {SinglePostPageLazy as SinglePostPage};

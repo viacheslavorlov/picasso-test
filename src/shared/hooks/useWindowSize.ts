@@ -1,8 +1,9 @@
-import {useEffect, useState} from 'react';
+import {throttle} from '@/shared/lib/throttle/throttle';
+import { useEffect, useState } from 'react';
 
-export function useWindowSize() {
-    const [width, setWidth] = useState(0);
-    const [height, setHeight] = useState(0);
+export function useWindowSize(delay: number) {
+    const [width, setWidth] = useState(window.innerWidth || 0);
+    const [height, setHeight] = useState(window.innerHeight ||0);
 
     const setWindowSize = () => {
         setHeight(window.innerHeight);
@@ -11,9 +12,16 @@ export function useWindowSize() {
 
     useEffect(() => {
         setWindowSize();
-        window.addEventListener('resize', setWindowSize);
-        return () => window.removeEventListener('resize', setWindowSize);
-    }, []);
+        const throttledSetWindowSize = throttle(setWindowSize, delay); // Используем throttle с задержкой в 200 миллисекунд
 
-    return [width, height]
+        window.addEventListener('resize', throttledSetWindowSize);
+        window.addEventListener('orientationchange', setWindowSize); // Добавляем обработчик для события изменения ориентации
+
+        return () => {
+            window.removeEventListener('resize', throttledSetWindowSize);
+            window.removeEventListener('orientationchange', setWindowSize);
+        };
+    }, [delay]);
+
+    return { width, height };
 }

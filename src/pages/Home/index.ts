@@ -1,3 +1,3 @@
-import {HomeLazy} from '@/pages/Home/ui/HomeLazy';
+import {HomeLazy} from './ui/HomeLazy';
 
 export {HomeLazy as Home};

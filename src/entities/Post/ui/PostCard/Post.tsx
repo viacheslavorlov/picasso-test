@@ -18,7 +18,7 @@ export const Post = memo((props: PostProps) => {
     } = props;
     const [body, setBody] = useState(post.body);
     const postBody = useRef<HTMLDivElement | null>(null);
-    const [width] = useWindowSize();
+    const {width} = useWindowSize(250);
 
     useLayoutEffect(() => {
         const postBodyLength = (postBody.current?.offsetWidth || width * 0.8) / 8;
